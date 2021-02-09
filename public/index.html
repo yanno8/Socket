@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>General chat</title>
+    <style>
+    </style>
+  </head>
+  <body id="logged-out">
+    <section id="chat">
+      <div id="app">
+        <div class="container">
+            <div class="sidebar left">
+                <div class="header-block user-block">
+                    <div class="avatar">
+                        <img src="https://images.unsplash.com/photo-1533264515790-38b563064b68?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt>
+                    </div>
+                    <div class="details">
+                        <div class="name">Johnny</div>
+                        <ul class="actions">
+                            <li>
+                                <a href="#">Change name</a>
+                            </li>
+                            <li>
+                                <a href="#">Leave</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="list channel-list">
+                    <a href="#" class="list-item active">
+                        <div class="icon">#</div>
+                        <div class="name">General</div>
+                    </a>
+                    <a href="#" class="list-item">
+                        <div class="icon">#</div>
+                        <div class="name">Random</div>
+                    </a>
+                </div>
+                
+                <div class="header-block">
+                    <div class="details">
+                        <div class="name">Users</div>
+                        <div class="description">Online</div>
+                    </div>
+                </div>
+                <div class="list" id="users">
+                    <div class="user-list-online">
+                        <a href="#" class="list-item">
+                            <div class="avatar">
+                                <img src="https://images.unsplash.com/photo-1533264515790-38b563064b68?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt>
+                            </div>
+                            <div class="nameo">test</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="header-block">
+                    <div class="details">
+                        <div class="description">Offline</div>
+                    </div>
+                </div>
+                <div class="list user-list">
+                    <a href="#" class="list-item">
+                        <div class="avatar">
+                            <img src="https://images.unsplash.com/photo-1495231916356-a86217efff12?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt>
+                        </div>
+                        <div class="name">Susan</div>
+                    </a>
+                </div>
+            </div>
+    
+            <div class="content">
+                <div class="header-block channel-block">
+                    <div class="details">
+                        <div class="name">General</div>
+                        <div class="description">Generic channel description</div>
+                    </div>
+                </div>
+                <div class="messages-block">
+                    <div class="messages-push"></div>
+                    <div class="messages contentMsg">
+                    </div>
+    
+                    <div class="messages-form">
+                        <form autocomplete="off">
+                            <input type="text" class="input" id="m" placeholder="Message #General">
+                            <button type="submit" class="envoyerbutton">Envoyer</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="sidebar right hide">
+                <div class="list user-list">
+                    <a href="#" class="list-item">
+                        <div class="avatar">
+                            <img src="https://images.unsplash.com/photo-1533264515790-38b563064b68?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt>
+                        </div>
+                        <div class="name">Johnny</div>
+                    </a>
+                    <a href="#" class="list-item">
+                        <div class="avatar">
+                            <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt>
+                        </div>
+                        <div class="name">Adam</div>
+                    </a>
+                    <a href="#" class="list-item">
+                        <div class="avatar">
+                            <img src="https://images.unsplash.com/photo-1495231916356-a86217efff12?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt>
+                        </div>
+                        <div class="name">Susan</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section id="login">
+      <form action="">
+        <label for="u">Username</label>
+        <input id="u" autocomplete="off" autofocus />
+        <p>
+          <button>Login</button>
+        </p>
+      </form>
+    </section>
+    <script
+      src="http://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous">
+    </script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>
